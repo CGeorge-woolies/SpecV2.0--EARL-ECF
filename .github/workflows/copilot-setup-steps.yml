@@ -1,0 +1,22 @@
+# Preinstalls what the Copilot coding agent needs. Without Chromium the census
+# and every open-state gate fail with a driver error that reads like a defect.
+name: "Copilot Setup Steps"
+on: workflow_dispatch
+
+jobs:
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install verification gates
+        run: cd internal && npm ci || npm install
+      - name: Install extraction framework
+        run: cd spec-extract && npm install
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'

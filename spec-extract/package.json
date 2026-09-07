@@ -1,0 +1,15 @@
+{
+  "name": "spec-extract",
+  "private": true,
+  "type": "module",
+  "description": "Agnostic extraction framework: turns a React/Tailwind prototype (source + built html) into a product-requirements delta. One config per app.",
+  "scripts": {
+    "source-map": "node src/source-map.mjs",
+    "resolve": "node src/resolve-spec-ids.mjs",
+    "census": "node src/census.mjs",
+    "diff": "node src/diff.mjs",
+    "plan": "node src/plan.mjs",
+    "delta": "node src/census.mjs --version $npm_config_to && node src/diff.mjs --from $npm_config_from --to $npm_config_to && node src/plan.mjs --from $npm_config_from --to $npm_config_to"
+  },
+  "devDependencies": { "playwright": "^1.47.0" }
+}

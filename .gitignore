@@ -1,0 +1,4 @@
+node_modules/
+spec-extract/out/census/*.json
+spec-extract/out/source-map/*.json
+spec-extract/out/*.json

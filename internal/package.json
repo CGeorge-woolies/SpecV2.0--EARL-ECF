@@ -1,0 +1,19 @@
+{
+  "name": "speckit-verification",
+  "private": true,
+  "type": "module",
+  "description": "INTERNAL verification harness. Not shipped with the pack. The document gates check the specs; the parity gate re-runs spec-extract's own generic passes against your build and diffs them, so it works on any prototype without per-app gate code. Checks ../HANDOVER.",
+  "scripts": {
+    "postinstall": "playwright install chromium",
+    "gate:docs": "node verification/gate-k-spec-completeness.mjs && node verification/gate-h-field-refs.mjs && node verification/gate-j-assets.mjs",
+    "gate:leak": "node verification/gate-g-spec-leak.mjs",
+    "gate:parity": "node verification/gate-parity.mjs --pass all",
+    "gate:parity:resting": "node verification/gate-parity.mjs --pass resting",
+    "gate:parity:open": "node verification/gate-parity.mjs --pass open",
+    "gate:parity:components": "node verification/gate-parity.mjs --pass components",
+    "gate:parity:states": "node verification/gate-parity.mjs --pass states"
+  },
+  "devDependencies": {
+    "playwright": "^1.47.0"
+  }
+}

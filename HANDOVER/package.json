@@ -1,0 +1,11 @@
+{
+  "name": "requirements-pack",
+  "private": true,
+  "type": "module",
+  "description": "Measurement tool for the shipped prototype. The specs are the requirement; this answers questions they do not carry. See MEASURING.md.",
+  "scripts": {
+    "setup": "npm install && npx playwright install chromium",
+    "measure": "node measure.mjs"
+  },
+  "devDependencies": { "playwright": "^1.47.0" }
+}

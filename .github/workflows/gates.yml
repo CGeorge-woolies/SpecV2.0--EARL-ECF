@@ -1,0 +1,23 @@
+name: Document gates
+on:
+  pull_request:
+    paths:
+      - 'requirements/**'
+      - 'HANDOVER/**'
+      - 'internal/verification/**'
+
+jobs:
+  gate-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: cd internal && (npm ci || npm install)
+      # Regenerate the sourcing index and fail if it drifted from the specs -
+      # it is generated, so a diff here means someone hand-edited it.
+      - run: python requirements/tools/gen-eng-sourcing.py
+      - run: git diff --exit-code -- requirements/ENG-SOURCING.md || (echo "ENG-SOURCING.md is generated - edit the Source: line and regenerate" && exit 1)
+      - run: cd internal && npm run gate:docs

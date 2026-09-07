@@ -1,0 +1,35 @@
+import { Dialog } from '@base-ui/react/dialog'
+import { Button } from '@/components/ui/button'
+
+interface Props {
+  open: boolean
+  orderCount: number
+  onClose: () => void
+  onConfirm: () => void
+}
+
+export function MoveOrdersToShopFloorDialog({ open, orderCount, onClose, onConfirm }: Props) {
+  const orderWord = orderCount === 1 ? 'order' : 'orders'
+  return (
+    <Dialog.Root open={open} onOpenChange={(o) => { if (!o) onClose() }}>
+      <Dialog.Portal>
+        <Dialog.Backdrop className="fixed inset-0 bg-black/45 z-[3000]" />
+        <Dialog.Popup className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[3001] w-[480px] max-w-[calc(100vw-48px)] bg-background rounded-xl p-8 shadow-2xl outline-none">
+          <Dialog.Title className="text-lg font-bold text-foreground mb-6">
+            {orderCount === 1 ? 'Move Order from OSR to Shop Floor' : 'Move Orders from OSR to Shop Floor'}
+          </Dialog.Title>
+          <p className="text-sm text-muted-foreground">
+            {orderCount} {orderWord} will be moved to the Shop Floor picking queue.
+            This can&apos;t be undone — once moved, {orderCount === 1 ? 'this order' : 'these orders'} will need to be picked from the shop floor.
+          </p>
+          <div className="flex gap-2 justify-end mt-7">
+            <Dialog.Close render={<Button variant="outline">Cancel</Button>} />
+            <Button onClick={onConfirm}>
+              Move to Shop Floor
+            </Button>
+          </div>
+        </Dialog.Popup>
+      </Dialog.Portal>
+    </Dialog.Root>
+  )
+}
