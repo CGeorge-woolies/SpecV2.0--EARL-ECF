@@ -15,9 +15,53 @@
  * A field named in prose and declared on no `Source:` line is a dangling
  * reference: the spec asks for a value and tells nobody where it comes from.
  */
+import fs from 'node:fs'
 import { readFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 import { PACK } from './config.mjs'
+
+/** Read a file the pack is supposed to contain, or explain what is missing.
+ *  A gate that throws ENOENT tells you a path; a gate that says WHICH artifact
+ *  is absent and WHICH step produces it tells you what to do. This one fires
+ *  routinely mid-run, because the document gates are useful long before the
+ *  supporting documents exist. */
+/** Same idea for a directory the pack should contain. */
+function readPackDir(p, what, producedBy) {
+  try {
+    return fs.readdirSync(p)
+  } catch {
+    console.error([
+      '',
+      'Cannot run this gate yet — ' + what + ' does not exist:',
+      '  ' + p,
+      '',
+      'It is produced by: ' + producedBy,
+      '',
+      'This is expected until that step has run. Not a failure of the specs.',
+      '',
+    ].join(String.fromCharCode(10)))
+    process.exit(2)
+  }
+}
+
+function readPackFile(p, what, producedBy) {
+  try {
+    return fs.readFileSync(p, 'utf8')
+  } catch {
+    console.error([
+      '',
+      `Cannot run this gate yet — ${what} does not exist:`,
+      '  ' + p,
+      '',
+      `It is produced by: ${producedBy}`,
+      '',
+      'This is expected until that step has run. Not a failure of the specs.',
+      '',
+    ].join(String.fromCharCode(10)))
+    process.exit(2)
+  }
+}
+
 
 const ROOT = PACK
 const SPECS = join(ROOT, 'functional-spec')
@@ -28,7 +72,7 @@ const CONVENTIONS = join(ROOT, 'DATA-CONVENTIONS.md')
  * lines at all, then reports every field in the pack as unresolved. */
 const SOURCE_LINE = /\*\*Source:?\*\*/
 
-const specFiles = readdirSync(SPECS).filter((n) => n.endsWith('.md') && !n.startsWith('_'))
+const specFiles = readPackDir(SPECS, 'HANDOVER/functional-spec/', '/new-app step 4 (write the specs), then sync requirements/ -> HANDOVER/').filter((n) => n.endsWith('.md') && !n.startsWith('_'))
 
 /* ---- what the SOURCE lines declare ----------------------------------------
  * A Source line owns its component's data requirement, so every field token in
@@ -63,7 +107,7 @@ for (const f of specFiles) {
 /* ---- what DATA-CONVENTIONS.md defines ------------------------------------
  * Enum values, conventions and the must-not-ship list. These are terms a spec
  * may legitimately name without a Source line of their own. */
-const conventions = readFileSync(CONVENTIONS, 'utf8')
+const conventions = readPackFile(CONVENTIONS, 'DATA-CONVENTIONS.md', '/new-app step 6 — the supporting documents')
 const defined = new Set()
 for (const m of conventions.matchAll(/`([A-Za-z][A-Za-z0-9_.\[\]*]*)`/g)) {
   for (const seg of m[1].replace(/\[\]/g, '').split('.')) {

@@ -18,6 +18,49 @@ import { fileURLToPath } from 'url'
 
 import { PACK } from './config.mjs'
 
+/** Read a file the pack is supposed to contain, or explain what is missing.
+ *  A gate that throws ENOENT tells you a path; a gate that says WHICH artifact
+ *  is absent and WHICH step produces it tells you what to do. This one fires
+ *  routinely mid-run, because the document gates are useful long before the
+ *  supporting documents exist. */
+/** Same idea for a directory the pack should contain. */
+function readPackDir(p, what, producedBy) {
+  try {
+    return fs.readdirSync(p)
+  } catch {
+    console.error([
+      '',
+      'Cannot run this gate yet — ' + what + ' does not exist:',
+      '  ' + p,
+      '',
+      'It is produced by: ' + producedBy,
+      '',
+      'This is expected until that step has run. Not a failure of the specs.',
+      '',
+    ].join(String.fromCharCode(10)))
+    process.exit(2)
+  }
+}
+
+function readPackFile(p, what, producedBy) {
+  try {
+    return fs.readFileSync(p, 'utf8')
+  } catch {
+    console.error([
+      '',
+      `Cannot run this gate yet — ${what} does not exist:`,
+      '  ' + p,
+      '',
+      `It is produced by: ${producedBy}`,
+      '',
+      'This is expected until that step has run. Not a failure of the specs.',
+      '',
+    ].join(String.fromCharCode(10)))
+    process.exit(2)
+  }
+}
+
+
 const __here = path.dirname(fileURLToPath(import.meta.url))
 /* Resolve against the HANDOVER PACK, never the shell's cwd. The gates are ours
  * and live outside the pack they check (`internal/`), so this must not resolve
@@ -26,9 +69,9 @@ const pkg = (p) => path.resolve(PACK, p)
 
 
 const SPEC_DIR = pkg('functional-spec')
-const LIB = fs.readFileSync(pkg('ux-ui-library/README.md'), 'utf8')
+const LIB = readPackFile(pkg('ux-ui-library/README.md'), 'ux-ui-library/README.md', '/new-app step 5 — the pattern-library extract')
 
-const files = fs.readdirSync(SPEC_DIR).filter((f) => f.endsWith('.md') && !f.startsWith('_'))
+const files = readPackDir(SPEC_DIR, 'HANDOVER/functional-spec/', '/new-app step 4 (write the specs), then sync requirements/ -> HANDOVER/').filter((f) => f.endsWith('.md') && !f.startsWith('_'))
 
 /** Split into lines — several checks must judge a marker IN CONTEXT, because the
  *  specs discuss their own markers constantly ("Outstanding ⚠ EXTRACT: none"). */
