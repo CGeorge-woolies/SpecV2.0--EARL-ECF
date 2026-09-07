@@ -63,7 +63,16 @@ const CHECKS = [
     } },
 
   { id: 'blocks', label: 'every component block has a Design requirement AND a Source',
-    perBlock: (b) => /\*\*Design requirement\*\*/.test(b.body) && /\*\*Source:\*\*/.test(b.body) },
+    /* BOTH punctuation forms are accepted, deliberately. The template writes
+     * `**Design requirement** *(…)*:` and `**Source** *(…)*:` — colon OUTSIDE
+     * the bold — while this check used to demand `**Source:**` with the colon
+     * INSIDE. An author following the template therefore could not pass the
+     * gate, and the failure presents as the maximally alarming 0/N on every
+     * spec at once, which reads like the specs are empty rather than like a
+     * punctuation mismatch. The gate's real question is whether the block
+     * DECLARES a design requirement and a source; where the colon sits is not
+     * part of that question. */
+    perBlock: (b) => /\*\*Design requirement:?\*\*/.test(b.body) && /\*\*Source:?\*\*/.test(b.body) },
 
   { id: 'extract', label: 'no unresolved ⚠ EXTRACT',
     /* Only an OPEN one counts. The specs discuss the marker constantly - a

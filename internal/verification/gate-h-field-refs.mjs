@@ -23,6 +23,11 @@ const ROOT = PACK
 const SPECS = join(ROOT, 'functional-spec')
 const CONVENTIONS = join(ROOT, 'DATA-CONVENTIONS.md')
 
+/* Accept `**Source:**` and `**Source**` alike — the template writes the colon
+ * outside the bold, and a harvester that matches only one form finds NO source
+ * lines at all, then reports every field in the pack as unresolved. */
+const SOURCE_LINE = /\*\*Source:?\*\*/
+
 const specFiles = readdirSync(SPECS).filter((n) => n.endsWith('.md') && !n.startsWith('_'))
 
 /* ---- what the SOURCE lines declare ----------------------------------------
@@ -36,10 +41,10 @@ const engMarked = new Set()
 for (const f of specFiles) {
   const lines = readFileSync(join(SPECS, f), 'utf8').split('\n')
   for (let i = 0; i < lines.length; i++) {
-    if (!lines[i].includes('**Source:**')) continue
+    if (!SOURCE_LINE.test(lines[i])) continue
     const block = [lines[i]]
     for (let j = i + 1; j < lines.length; j++) {
-      if (!/^\s{2,}\S/.test(lines[j]) || lines[j].includes('**Source:**')) break
+      if (!/^\s{2,}\S/.test(lines[j]) || SOURCE_LINE.test(lines[j])) break
       block.push(lines[j])
     }
     const text = block.join(' ')
@@ -140,7 +145,7 @@ for (const f of specFiles) {
   for (const b of blocks) {
     const heading = b.split('\n')[0]
     if (!/CMP-/.test(heading)) continue          // §A1/§E subsections are not components
-    if (!b.includes('**Source:**')) {
+    if (!SOURCE_LINE.test(b)) {
       blocksWithoutSource.push(`${f}  ${heading.trim().slice(0, 64)}`)
     }
   }
