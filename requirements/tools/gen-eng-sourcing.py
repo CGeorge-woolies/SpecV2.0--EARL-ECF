@@ -13,6 +13,10 @@ REQ = os.path.dirname(HERE)
 SPECS = os.path.join(REQ, 'functional-spec')
 OUT = os.path.join(REQ, 'ENG-SOURCING.md')
 
+# Accept both `**Source:**` and `**Source**` — the template puts the colon
+# outside the bold, and matching only one form silently generates an EMPTY index.
+SOURCE_LINE = re.compile(r'\*\*Source:?\*\*')
+
 WARN = u'⚠'
 MID = u'·'
 
@@ -21,7 +25,7 @@ SCREEN_TITLES = {}
 def clean(s):
     s = s.strip()
     s = re.sub(r'^-\s*', '', s)
-    s = re.sub(r'^\*\*Source:\*\*\s*', '', s)
+    s = re.sub(r'^\*\*Source:?\*\*\s*', '', s)
     s = re.sub(r'\s+', ' ', s)
     return s.strip()
 
@@ -42,12 +46,12 @@ def harvest(path):
         h = re.match(r'^###\s+(.*)$', L)
         if h:
             comp = h.group(1).strip()
-        if '**Source:**' in L:
+        if SOURCE_LINE.search(L):
             # collect the Source line plus any indented continuation/sub-bullets
             block = [L]
             j = i + 1
             while j < len(lines) and re.match(r'^\s{2,}\S', lines[j]) \
-                    and '**Source:**' not in lines[j]:
+                    and not SOURCE_LINE.search(lines[j]):
                 block.append(lines[j])
                 j += 1
             # split the block into entries: top line, then each "  - " sub-bullet
