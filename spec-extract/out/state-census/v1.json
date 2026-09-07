@@ -1,0 +1,1717 @@
+{
+  "generated": "2026-09-07T09:42:28.445Z",
+  "app": "anz-ecf",
+  "version": "v1",
+  "viewport": 1440,
+  "screens": {
+    "entry-gate": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        }
+      ],
+      "disclosure": [],
+      "row": {},
+      "focusVisible": {
+        "on": "a[data-slot=\"tooltip-trigger\"]",
+        "outline": "1px auto oklab(0.708 0 0 / 0.5)",
+        "outlineOffset": "1px",
+        "boxShadow": null,
+        "matchesFocusVisible": true
+      }
+    },
+    "order-summary": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        },
+        {
+          "selector": "th",
+          "instances": 14,
+          "changedInstances": 14,
+          "changes": [
+            {
+              "box": {
+                "from": {
+                  "y": 170,
+                  "h": 45
+                },
+                "to": {
+                  "y": 68,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "38.5469px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 170,
+                  "h": 45
+                },
+                "to": {
+                  "y": 68,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "38.5469px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 170,
+                  "h": 45
+                },
+                "to": {
+                  "y": 68,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "39.0469px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            }
+          ],
+          "verdict": "CHANGES ON SCROLL — measured"
+        },
+        {
+          "selector": "div",
+          "instances": 40,
+          "changedInstances": 21,
+          "changes": [
+            {
+              "box": {
+                "from": {
+                  "y": 0,
+                  "h": 4558
+                },
+                "to": {
+                  "y": -600,
+                  "h": 4558
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 0,
+                  "h": 4558
+                },
+                "to": {
+                  "y": -600,
+                  "h": 4558
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 68,
+                  "h": 4445
+                },
+                "to": {
+                  "y": -532,
+                  "h": 4445
+                }
+              }
+            }
+          ],
+          "verdict": "CHANGES ON SCROLL — measured"
+        }
+      ],
+      "disclosure": [
+        {
+          "rowsBefore": 129,
+          "rowsAfter": 129,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": "all 0.15s",
+          "verdict": "expands with a declared transition — measured"
+        },
+        {
+          "rowsBefore": 129,
+          "rowsAfter": 129,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": "all 0.15s",
+          "verdict": "expands with a declared transition — measured"
+        }
+      ],
+      "row": {
+        "hoverVariants": [
+          {
+            "rowIndex": 0,
+            "rowClass": "cursor-pointer font-bold",
+            "change": null
+          },
+          {
+            "rowIndex": 1,
+            "rowClass": "group cursor-pointer hover:brightness-95",
+            "change": {
+              "filter": {
+                "from": null,
+                "to": "brightness(0.95)"
+              }
+            }
+          }
+        ],
+        "hover": {
+          "filter": {
+            "from": null,
+            "to": "brightness(0.95)"
+          }
+        },
+        "hoverVerdict": "1 of 2 sampled row variants react to hover — measured",
+        "selected": null,
+        "selectedVerdict": "NO selected-row treatment — measured. A row can be selected with no visual change; that is a finding, not a missing measurement."
+      },
+      "focusVisible": {
+        "on": "a[data-slot=\"tooltip-trigger\"]",
+        "outline": "1px auto oklab(0.708 0 0 / 0.5)",
+        "outlineOffset": "1px",
+        "boxShadow": null,
+        "matchesFocusVisible": true
+      }
+    },
+    "order-summary-nz": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        },
+        {
+          "selector": "th",
+          "instances": 14,
+          "changedInstances": 14,
+          "changes": [
+            {
+              "box": {
+                "from": {
+                  "y": 170,
+                  "h": 45
+                },
+                "to": {
+                  "y": 68,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "38.5469px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 170,
+                  "h": 45
+                },
+                "to": {
+                  "y": 68,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "38.5469px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 170,
+                  "h": 45
+                },
+                "to": {
+                  "y": 68,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "39.0469px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            }
+          ],
+          "verdict": "CHANGES ON SCROLL — measured"
+        },
+        {
+          "selector": "div",
+          "instances": 40,
+          "changedInstances": 21,
+          "changes": [
+            {
+              "box": {
+                "from": {
+                  "y": 0,
+                  "h": 4410
+                },
+                "to": {
+                  "y": -600,
+                  "h": 4410
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 0,
+                  "h": 4410
+                },
+                "to": {
+                  "y": -600,
+                  "h": 4410
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 68,
+                  "h": 4297
+                },
+                "to": {
+                  "y": -532,
+                  "h": 4297
+                }
+              }
+            }
+          ],
+          "verdict": "CHANGES ON SCROLL — measured"
+        }
+      ],
+      "disclosure": [
+        {
+          "rowsBefore": 125,
+          "rowsAfter": 125,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": "all 0.15s",
+          "verdict": "expands with a declared transition — measured"
+        },
+        {
+          "rowsBefore": 125,
+          "rowsAfter": 125,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": "all 0.15s",
+          "verdict": "expands with a declared transition — measured"
+        }
+      ],
+      "row": {
+        "hoverVariants": [
+          {
+            "rowIndex": 0,
+            "rowClass": "cursor-pointer font-bold",
+            "change": null
+          },
+          {
+            "rowIndex": 1,
+            "rowClass": "group cursor-pointer hover:brightness-95",
+            "change": {
+              "filter": {
+                "from": null,
+                "to": "brightness(0.95)"
+              }
+            }
+          }
+        ],
+        "hover": {
+          "filter": {
+            "from": null,
+            "to": "brightness(0.95)"
+          }
+        },
+        "hoverVerdict": "1 of 2 sampled row variants react to hover — measured",
+        "selected": null,
+        "selectedVerdict": "NO selected-row treatment — measured. A row can be selected with no visual change; that is a finding, not a missing measurement."
+      },
+      "focusVisible": {
+        "on": "a[data-slot=\"tooltip-trigger\"]",
+        "outline": "1px auto oklab(0.708 0 0 / 0.5)",
+        "outlineOffset": "1px",
+        "boxShadow": null,
+        "matchesFocusVisible": true
+      }
+    },
+    "order-summary-estore": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        },
+        {
+          "selector": "th",
+          "instances": 14,
+          "changedInstances": 14,
+          "changes": [
+            {
+              "box": {
+                "from": {
+                  "y": 170,
+                  "h": 45
+                },
+                "to": {
+                  "y": 68,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "38.5469px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 170,
+                  "h": 45
+                },
+                "to": {
+                  "y": 68,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "38.5469px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 170,
+                  "h": 45
+                },
+                "to": {
+                  "y": 68,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "39.0469px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            }
+          ],
+          "verdict": "CHANGES ON SCROLL — measured"
+        },
+        {
+          "selector": "div",
+          "instances": 40,
+          "changedInstances": 21,
+          "changes": [
+            {
+              "box": {
+                "from": {
+                  "y": 0,
+                  "h": 4292
+                },
+                "to": {
+                  "y": -600,
+                  "h": 4292
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 0,
+                  "h": 4292
+                },
+                "to": {
+                  "y": -600,
+                  "h": 4292
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 68,
+                  "h": 4179
+                },
+                "to": {
+                  "y": -532,
+                  "h": 4179
+                }
+              }
+            }
+          ],
+          "verdict": "CHANGES ON SCROLL — measured"
+        }
+      ],
+      "disclosure": [
+        {
+          "rowsBefore": 121,
+          "rowsAfter": 121,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": "all 0.15s",
+          "verdict": "expands with a declared transition — measured"
+        },
+        {
+          "rowsBefore": 121,
+          "rowsAfter": 121,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": "all 0.15s",
+          "verdict": "expands with a declared transition — measured"
+        }
+      ],
+      "row": {
+        "hoverVariants": [
+          {
+            "rowIndex": 0,
+            "rowClass": "cursor-pointer font-bold",
+            "change": null
+          },
+          {
+            "rowIndex": 2,
+            "rowClass": "group cursor-pointer hover:brightness-95",
+            "change": {
+              "filter": {
+                "from": null,
+                "to": "brightness(0.95)"
+              }
+            }
+          }
+        ],
+        "hover": {
+          "filter": {
+            "from": null,
+            "to": "brightness(0.95)"
+          }
+        },
+        "hoverVerdict": "1 of 2 sampled row variants react to hover — measured",
+        "selected": null,
+        "selectedVerdict": "NO selected-row treatment — measured. A row can be selected with no visual change; that is a finding, not a missing measurement."
+      },
+      "focusVisible": {
+        "on": "a[data-slot=\"tooltip-trigger\"]",
+        "outline": "1px auto oklab(0.708 0 0 / 0.5)",
+        "outlineOffset": "1px",
+        "boxShadow": null,
+        "matchesFocusVisible": true
+      }
+    },
+    "order-summary-cfc-au": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        },
+        {
+          "selector": "th",
+          "instances": 14,
+          "changedInstances": 14,
+          "changes": [
+            {
+              "box": {
+                "from": {
+                  "y": 194,
+                  "h": 45
+                },
+                "to": {
+                  "y": 68,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "38.5469px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 194,
+                  "h": 45
+                },
+                "to": {
+                  "y": 68,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "38.5469px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 194,
+                  "h": 45
+                },
+                "to": {
+                  "y": 68,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "39.0469px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            }
+          ],
+          "verdict": "CHANGES ON SCROLL — measured"
+        },
+        {
+          "selector": "div",
+          "instances": 40,
+          "changedInstances": 21,
+          "changes": [
+            {
+              "box": {
+                "from": {
+                  "y": 0,
+                  "h": 4582
+                },
+                "to": {
+                  "y": -600,
+                  "h": 4582
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 0,
+                  "h": 4582
+                },
+                "to": {
+                  "y": -600,
+                  "h": 4582
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 68,
+                  "h": 4469
+                },
+                "to": {
+                  "y": -532,
+                  "h": 4469
+                }
+              }
+            }
+          ],
+          "verdict": "CHANGES ON SCROLL — measured"
+        }
+      ],
+      "disclosure": [
+        {
+          "rowsBefore": 129,
+          "rowsAfter": 129,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": "all 0.15s",
+          "verdict": "expands with a declared transition — measured"
+        },
+        {
+          "rowsBefore": 129,
+          "rowsAfter": 129,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": "all 0.15s",
+          "verdict": "expands with a declared transition — measured"
+        }
+      ],
+      "row": {
+        "hoverVariants": [
+          {
+            "rowIndex": 0,
+            "rowClass": "cursor-pointer font-bold",
+            "change": null
+          },
+          {
+            "rowIndex": 1,
+            "rowClass": "group cursor-pointer hover:brightness-95",
+            "change": {
+              "filter": {
+                "from": null,
+                "to": "brightness(0.95)"
+              }
+            }
+          }
+        ],
+        "hover": {
+          "filter": {
+            "from": null,
+            "to": "brightness(0.95)"
+          }
+        },
+        "hoverVerdict": "1 of 2 sampled row variants react to hover — measured",
+        "selected": null,
+        "selectedVerdict": "NO selected-row treatment — measured. A row can be selected with no visual change; that is a finding, not a missing measurement."
+      },
+      "focusVisible": {
+        "on": "a[data-slot=\"tooltip-trigger\"]",
+        "outline": "1px auto oklab(0.708 0 0 / 0.5)",
+        "outlineOffset": "1px",
+        "boxShadow": null,
+        "matchesFocusVisible": true
+      }
+    },
+    "order-detail-articles": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        },
+        {
+          "selector": "div",
+          "instances": 40,
+          "changedInstances": 29,
+          "changes": [
+            {
+              "box": {
+                "from": {
+                  "y": 0,
+                  "h": 1542
+                },
+                "to": {
+                  "y": -600,
+                  "h": 1542
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 0,
+                  "h": 1542
+                },
+                "to": {
+                  "y": -600,
+                  "h": 1542
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 68,
+                  "h": 1441
+                },
+                "to": {
+                  "y": -532,
+                  "h": 1441
+                }
+              }
+            }
+          ],
+          "verdict": "CHANGES ON SCROLL — measured"
+        }
+      ],
+      "disclosure": [
+        {
+          "rowsBefore": 24,
+          "rowsAfter": 24,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": "all 0.15s",
+          "verdict": "expands with a declared transition — measured"
+        }
+      ],
+      "row": {
+        "hoverVariants": [
+          {
+            "rowIndex": 0,
+            "rowClass": "",
+            "change": null
+          },
+          {
+            "rowIndex": 1,
+            "rowClass": "cursor-pointer hover:brightness-[0.97]",
+            "change": {
+              "filter": {
+                "from": null,
+                "to": "brightness(0.97)"
+              }
+            }
+          }
+        ],
+        "hover": {
+          "filter": {
+            "from": null,
+            "to": "brightness(0.97)"
+          }
+        },
+        "hoverVerdict": "1 of 2 sampled row variants react to hover — measured"
+      },
+      "focusVisible": {
+        "on": "button[data-slot=\"tooltip-trigger\"]",
+        "outline": null,
+        "outlineOffset": "0px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "matchesFocusVisible": true
+      }
+    },
+    "order-detail-details": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        },
+        {
+          "selector": "div",
+          "instances": 40,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        }
+      ],
+      "disclosure": [
+        {
+          "rowsBefore": 0,
+          "rowsAfter": 0,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": null,
+          "verdict": "expands with NO transition — measured. Content appears instantly; record as `none`."
+        }
+      ],
+      "row": {},
+      "focusVisible": {
+        "on": "button[data-slot=\"select-trigger\"]",
+        "outline": null,
+        "outlineOffset": "0px",
+        "boxShadow": null,
+        "matchesFocusVisible": true
+      }
+    },
+    "order-detail-instructions": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        },
+        {
+          "selector": "div",
+          "instances": 36,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        }
+      ],
+      "disclosure": [
+        {
+          "rowsBefore": 0,
+          "rowsAfter": 0,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": "all 0.15s",
+          "verdict": "expands with a declared transition — measured"
+        }
+      ],
+      "row": {},
+      "focusVisible": {
+        "on": "textarea[data-slot=\"textarea\"]",
+        "outline": null,
+        "outlineOffset": "0px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+        "matchesFocusVisible": true
+      }
+    },
+    "order-detail-labels": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        },
+        {
+          "selector": "div",
+          "instances": 28,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        }
+      ],
+      "disclosure": [
+        {
+          "rowsBefore": 4,
+          "rowsAfter": 4,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": "all 0.15s",
+          "verdict": "expands with a declared transition — measured"
+        },
+        {
+          "rowsBefore": 4,
+          "rowsAfter": 4,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": "all 0.15s",
+          "verdict": "expands with a declared transition — measured"
+        }
+      ],
+      "row": {
+        "hoverVariants": [
+          {
+            "rowIndex": 0,
+            "rowClass": "",
+            "change": null
+          }
+        ],
+        "hover": null,
+        "hoverVerdict": "no sampled row reacts to hover — measured",
+        "selected": null,
+        "selectedVerdict": "NO selected-row treatment — measured. A row can be selected with no visual change; that is a finding, not a missing measurement."
+      },
+      "focusVisible": {
+        "on": "span[data-slot=\"checkbox\"]",
+        "outline": null,
+        "outlineOffset": "0px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "matchesFocusVisible": true
+      }
+    },
+    "order-detail-samples": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        },
+        {
+          "selector": "div",
+          "instances": 27,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        }
+      ],
+      "disclosure": [
+        {
+          "rowsBefore": 2,
+          "rowsAfter": 2,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": "all 0.15s",
+          "verdict": "expands with a declared transition — measured"
+        }
+      ],
+      "row": {
+        "hoverVariants": [
+          {
+            "rowIndex": 0,
+            "rowClass": "",
+            "change": null
+          }
+        ],
+        "hover": null,
+        "hoverVerdict": "no sampled row reacts to hover — measured"
+      },
+      "focusVisible": {
+        "on": "button[data-slot=\"tooltip-trigger\"]",
+        "outline": null,
+        "outlineOffset": "0px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+        "matchesFocusVisible": true
+      }
+    },
+    "order-detail-audit": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        },
+        {
+          "selector": "div",
+          "instances": 27,
+          "changedInstances": 15,
+          "changes": [
+            {
+              "box": {
+                "from": {
+                  "y": 0,
+                  "h": 909
+                },
+                "to": {
+                  "y": -9,
+                  "h": 909
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 0,
+                  "h": 909
+                },
+                "to": {
+                  "y": -9,
+                  "h": 909
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 68,
+                  "h": 808
+                },
+                "to": {
+                  "y": 59,
+                  "h": 808
+                }
+              }
+            }
+          ],
+          "verdict": "CHANGES ON SCROLL — measured"
+        }
+      ],
+      "disclosure": [
+        {
+          "rowsBefore": 13,
+          "rowsAfter": 13,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": "all 0.15s",
+          "verdict": "expands with a declared transition — measured"
+        }
+      ],
+      "row": {
+        "hoverVariants": [
+          {
+            "rowIndex": 0,
+            "rowClass": "",
+            "change": null
+          }
+        ],
+        "hover": null,
+        "hoverVerdict": "no sampled row reacts to hover — measured"
+      },
+      "focusVisible": {
+        "on": "button[data-slot=\"tooltip-trigger\"]",
+        "outline": null,
+        "outlineOffset": "0px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+        "matchesFocusVisible": true
+      }
+    },
+    "order-detail-nz-customer-support": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        },
+        {
+          "selector": "div",
+          "instances": 40,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        }
+      ],
+      "disclosure": [
+        {
+          "rowsBefore": 0,
+          "rowsAfter": 0,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": null,
+          "verdict": "expands with NO transition — measured. Content appears instantly; record as `none`."
+        }
+      ],
+      "row": {},
+      "focusVisible": {
+        "on": "button[data-slot=\"button\"]",
+        "outline": null,
+        "outlineOffset": "0px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "matchesFocusVisible": true
+      }
+    },
+    "order-detail-estore": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        },
+        {
+          "selector": "div",
+          "instances": 40,
+          "changedInstances": 29,
+          "changes": [
+            {
+              "box": {
+                "from": {
+                  "y": 0,
+                  "h": 1428
+                },
+                "to": {
+                  "y": -528,
+                  "h": 1428
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 0,
+                  "h": 1428
+                },
+                "to": {
+                  "y": -528,
+                  "h": 1428
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 68,
+                  "h": 1327
+                },
+                "to": {
+                  "y": -460,
+                  "h": 1327
+                }
+              }
+            }
+          ],
+          "verdict": "CHANGES ON SCROLL — measured"
+        }
+      ],
+      "disclosure": [
+        {
+          "rowsBefore": 22,
+          "rowsAfter": 22,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": "all 0.15s",
+          "verdict": "expands with a declared transition — measured"
+        }
+      ],
+      "row": {
+        "hoverVariants": [
+          {
+            "rowIndex": 0,
+            "rowClass": "",
+            "change": null
+          },
+          {
+            "rowIndex": 1,
+            "rowClass": "cursor-pointer hover:brightness-[0.97]",
+            "change": {
+              "filter": {
+                "from": null,
+                "to": "brightness(0.97)"
+              }
+            }
+          }
+        ],
+        "hover": {
+          "filter": {
+            "from": null,
+            "to": "brightness(0.97)"
+          }
+        },
+        "hoverVerdict": "1 of 2 sampled row variants react to hover — measured",
+        "selected": {
+          "filter": {
+            "from": null,
+            "to": "brightness(0.97)"
+          }
+        },
+        "selectedVerdict": "selected rows change appearance — measured"
+      },
+      "focusVisible": {
+        "on": "button[data-slot=\"tooltip-trigger\"]",
+        "outline": null,
+        "outlineOffset": "0px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "matchesFocusVisible": true
+      }
+    },
+    "order-line-detail": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        }
+      ],
+      "disclosure": [],
+      "row": {},
+      "focusVisible": {
+        "on": "a",
+        "outline": "1px auto oklab(0.708 0 0 / 0.5)",
+        "outlineOffset": "1px",
+        "boxShadow": null,
+        "matchesFocusVisible": true
+      }
+    },
+    "search-orders-prefilter": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        }
+      ],
+      "disclosure": [
+        {
+          "rowsBefore": 0,
+          "rowsAfter": 0,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": null,
+          "verdict": "expands with NO transition — measured. Content appears instantly; record as `none`."
+        },
+        {
+          "rowsBefore": 0,
+          "rowsAfter": 0,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": null,
+          "verdict": "expands with NO transition — measured. Content appears instantly; record as `none`."
+        }
+      ],
+      "row": {},
+      "focusVisible": {
+        "on": "button",
+        "outline": "1px auto oklab(0.708 0 0 / 0.5)",
+        "outlineOffset": "0px",
+        "boxShadow": null,
+        "matchesFocusVisible": true
+      }
+    },
+    "search-orders-results": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        },
+        {
+          "selector": "th",
+          "instances": 16,
+          "changedInstances": 16,
+          "changes": [
+            {
+              "box": {
+                "from": {
+                  "y": 551,
+                  "h": 45
+                },
+                "to": {
+                  "y": 68,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "83.3438px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 551,
+                  "h": 45
+                },
+                "to": {
+                  "y": 68,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "110.797px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 551,
+                  "h": 45
+                },
+                "to": {
+                  "y": 68,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "35.3281px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            }
+          ],
+          "verdict": "CHANGES ON SCROLL — measured"
+        }
+      ],
+      "disclosure": [
+        {
+          "rowsBefore": 314,
+          "rowsAfter": 314,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": null,
+          "verdict": "expands with NO transition — measured. Content appears instantly; record as `none`."
+        },
+        {
+          "rowsBefore": 314,
+          "rowsAfter": 314,
+          "rowDelta": 0,
+          "mainHeightDelta": 0,
+          "revealedTransition": null,
+          "verdict": "expands with NO transition — measured. Content appears instantly; record as `none`."
+        }
+      ],
+      "row": {
+        "hoverVariants": [
+          {
+            "rowIndex": 0,
+            "rowClass": "cursor-pointer hover:brightness-95",
+            "change": {
+              "filter": {
+                "from": null,
+                "to": "brightness(0.95)"
+              }
+            }
+          }
+        ],
+        "hover": {
+          "filter": {
+            "from": null,
+            "to": "brightness(0.95)"
+          }
+        },
+        "hoverVerdict": "1 of 1 sampled row variants react to hover — measured",
+        "selected": {
+          "filter": {
+            "from": null,
+            "to": "brightness(0.95)"
+          }
+        },
+        "selectedVerdict": "selected rows change appearance — measured"
+      },
+      "focusVisible": {
+        "on": "button[data-slot=\"button\"]",
+        "outline": null,
+        "outlineOffset": "0px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0.708 0 0 / 0.5) 0px 0px 0px 3px, rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+        "matchesFocusVisible": true
+      }
+    },
+    "dash-indicators": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        }
+      ],
+      "disclosure": [],
+      "row": {
+        "hoverVariants": [
+          {
+            "rowIndex": 0,
+            "rowClass": "",
+            "change": null
+          }
+        ],
+        "hover": null,
+        "hoverVerdict": "no sampled row reacts to hover — measured"
+      },
+      "focusVisible": {
+        "on": "a[data-slot=\"tooltip-trigger\"]",
+        "outline": "1px auto oklab(0.708 0 0 / 0.5)",
+        "outlineOffset": "1px",
+        "boxShadow": null,
+        "matchesFocusVisible": true
+      }
+    },
+    "dash-timeline": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        },
+        {
+          "selector": "th",
+          "instances": 5,
+          "changedInstances": 5,
+          "changes": [
+            {
+              "box": {
+                "from": {
+                  "y": 196,
+                  "h": 45
+                },
+                "to": {
+                  "y": -283,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "64px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 196,
+                  "h": 45
+                },
+                "to": {
+                  "y": -283,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "846px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            },
+            {
+              "box": {
+                "from": {
+                  "y": 196,
+                  "h": 45
+                },
+                "to": {
+                  "y": -283,
+                  "h": 45
+                }
+              },
+              "after": {
+                "from": null,
+                "to": {
+                  "content": "\"\"",
+                  "height": "10px",
+                  "width": "90px",
+                  "position": "absolute",
+                  "top": "44px",
+                  "bottom": "-10px",
+                  "backgroundImage": "linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0))",
+                  "backgroundColor": null,
+                  "boxShadow": null,
+                  "opacity": "1"
+                }
+              }
+            }
+          ],
+          "verdict": "CHANGES ON SCROLL — measured"
+        }
+      ],
+      "disclosure": [],
+      "row": {
+        "hoverVariants": [
+          {
+            "rowIndex": 0,
+            "rowClass": "",
+            "change": null
+          }
+        ],
+        "hover": null,
+        "hoverVerdict": "no sampled row reacts to hover — measured"
+      },
+      "focusVisible": null
+    },
+    "settings": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        }
+      ],
+      "disclosure": [],
+      "row": {},
+      "focusVisible": {
+        "on": "a[data-slot=\"tooltip-trigger\"]",
+        "outline": "1px auto oklab(0.708 0 0 / 0.5)",
+        "outlineOffset": "1px",
+        "boxShadow": null,
+        "matchesFocusVisible": true
+      }
+    },
+    "reports": {
+      "scroll": [
+        {
+          "selector": "header",
+          "instances": 1,
+          "changedInstances": 0,
+          "changes": [],
+          "verdict": "no change on scroll — measured. Sticky, but its appearance does not react. Record as `none`, not as unmeasured."
+        }
+      ],
+      "disclosure": [],
+      "row": {},
+      "focusVisible": {
+        "on": "a[data-slot=\"tooltip-trigger\"]",
+        "outline": "1px auto oklab(0.708 0 0 / 0.5)",
+        "outlineOffset": "1px",
+        "boxShadow": null,
+        "matchesFocusVisible": true
+      }
+    }
+  },
+  "driverFailures": [
+    {
+      "screen": "order-detail-details",
+      "probe": "disclosure",
+      "error": "locator.click: Timeout 4000ms exceeded."
+    },
+    {
+      "screen": "order-detail-nz-customer-support",
+      "probe": "disclosure",
+      "error": "locator.click: Timeout 4000ms exceeded."
+    }
+  ]
+}
